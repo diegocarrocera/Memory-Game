@@ -1,0 +1,277 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #ffffff url('../img/background/background.png') ;
+	/* Background pattern from Subtle Patterns */
+	font-family: 'Coda', cursive;
+}
+
+
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+h1 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	color: white;
+}
+
+#logo-title {
+	margin-left: 225px;
+	margin-top: -75px;
+	margin-bottom: 34px;
+}
+
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+	width: 617px;
+	min-height: 597px;
+	padding: 32px;
+	border-radius: 135px;
+	box-shadow: 12px 15px 20px 0 rgb(255, 255, 255);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 0 3em;
+}
+
+.deck .card {
+	height: 125px;
+	width: 125px;
+	background: url(../img/Cards/cards.png);
+	font-size: 0;
+	color: #ffffff;
+	border-radius: 77px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 2px 0px 20px 8px rgb(255, 255, 255);
+}
+
+.deck .card.open {
+	transform: rotateY(0);
+	background: linear-gradient(127deg, #384DFF 0%, #24CDFF 91%);
+	cursor: default;
+}
+
+.deck .card.show {
+	font-size: 33px;
+}
+
+.deck .card.match {
+	cursor: default;
+	background: linear-gradient(127deg, #384DFF 0%, #24CDFF 91%);
+	font-size: 33px;
+}
+
+.deck .card.disable {
+	pointer-events: none;
+}
+
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+	text-align: left;
+	width: 345px;
+	margin-bottom: 10px;
+	color: white;
+}
+
+.score-panel .stars {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	margin: 0 5px 0 0;
+}
+
+.score-panel .stars li {
+	list-style: none;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.score-panel .restart {
+	float: right;
+	cursor: pointer;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	transition: opacity 500ms;
+	visibility: hidden;
+}
+
+.overlay:target {
+	visibility: visible;
+	opacity: 1;
+}
+
+.popup {
+	margin: 70px auto;
+	padding: 20px;
+	background: url(../img/modal/modal.png);
+	border-radius: 5px;
+	width: 56%;
+	position: relative;
+	transition: all 5s ease-in-out;
+	font-family: Vegur, 'PT Sans', Verdana, Sans-serif;
+}
+
+.popup h2 {
+	margin-top: 0;
+	color: white;
+	font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+}
+
+.popup .close:hover {
+	color: #384DFF;
+}
+
+.popup .results-title,
+.statistics {
+	max-height: 30%;
+	overflow: auto;
+	text-align: center;
+	color: white
+}
+
+.show {
+	visibility: visible !important;
+	opacity: 100 !important;
+}
+
+.button-reload {
+	background: #384DFF;
+	color: white;
+	padding: 0.7rem 1rem;
+	font-size: 1.1rem;
+	display: block;
+	margin: 0 auto;
+	width: 17%;
+	border-radius: 5px;
+}
+
+
+/*<<<<<<<<<<<END FOOTER>>>>>>>>>>>*/
+
+#footer {
+	padding: 50px 0;
+	position: relative;
+	color: #fff;
+}
+
+#footer .gotop {
+	position: relative;
+	top: -20px;
+	left: 50%;
+	margin-left: -40px;
+	z-index: 8;
+	width: 80px;
+	height: 80px;
+	font-size: 30px;
+	padding-top: 5px;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 50%;
+	transition: .2s
+}
+
+#logo-dc-footer {
+	height: 50px;
+	width: 50px;
+	margin: -21px -83px -38px 0px;
+	margin-top: -77px;
+}
+
+.social {
+	position: relative
+}
+
+.social,
+.social li {
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+	margin-left: 9px;
+}
+
+.social li a.social-box,
+.social li a.social-circle {
+	color: #fff
+}
+
+
+}
+.social {
+	width: 100%
+}
+.social li {
+	list-style: none
+}
+.social li a {
+	font-size: 16px;
+	display: table;
+	width: 40px;
+	height: 40px;
+	margin: 0 4px
+}
+.social li a i {
+	display: table-cell;
+	vertical-align: middle
+}
+.social.social-box a,
+.social.social-circle a {
+	color: #fff
+}
+.typewrite{
+	color: white
+}
+
+/*<<<<<<<<<<<END FOOTER>>>>>>>>>>>*/
+
